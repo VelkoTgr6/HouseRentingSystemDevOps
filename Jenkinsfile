@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     echo 'Restoring NuGet packages...'
-                    bat 'dotnet restore'
+                    sh 'dotnet restore'
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building the project...'
-                    bat 'dotnet build --no-restore'
+                    sh 'dotnet build --no-restore'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     echo 'Running tests...'
-                    bat 'dotnet test --no-build --verbosity normal'
+                    sh 'dotnet test --no-build --verbosity normal'
                 }
             }
         }
