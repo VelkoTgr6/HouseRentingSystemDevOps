@@ -2,7 +2,7 @@
 {
     public enum HouseSorting
     {
-        //changes the order of the houses
+        //changes 
         Newest = 0,
         Price = 1,
         NotRentedFirst = 2
